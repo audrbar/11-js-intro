@@ -35,3 +35,6 @@ console.log('----------------Saknis--------------------');
 
 const Saknis81 = 81 ** 0.5;
 console.log('Saknis is 81: ', Saknis81);
+
+const kubineSaknis27 = 27 ** (1 / 3);
+console.log(kubineSaknis27);
