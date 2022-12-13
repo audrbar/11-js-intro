@@ -1,5 +1,6 @@
 /*OBJECT*/
 // [vardas, ar vedes, amzius]
+// primityvus ir kompleksiniai kintamieji
 const user1 = ['Petras', 99, true];
 const user2 = ['Maryte', 87, false];
 
@@ -114,5 +115,8 @@ const person = {
 };
 
 console.log(person.children[0].name);
+console.log(person['children'][2]['name']);
+console.log(person.children[2]['name']);
+console.log(person['children'][2].name);
+console.log(person.children[2].name);
 console.log(person.children.length);
-

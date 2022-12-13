@@ -24,3 +24,13 @@ console.log(typeof 'oiidrd');
 const marks = [10, 2, 8];
 const marksType = typeof marks;
 console.log(marks, marksType);
+
+console.log('-------------------------------');
+
+const x = '' + 5;
+
+console.log(x);
+console.log(typeof(x));
+
+const y = typeof ('' + 5);
+console.log(y);
