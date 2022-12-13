@@ -24,6 +24,7 @@ const s23 = suma(n2, n3);
 console.log(s12, s21);
 console.log(s13);
 console.log(s23);
+
 console.log('--------------kitas1-------------');
 const savikaina1 = 10;
 const savikaina2 = 20;
@@ -36,7 +37,11 @@ function coof(proc) {
 function salesPrice(cost) {
     const tax = 20;
     const margin = 30;
-    return cost * coof(tax) * coof(margin);
+
+    const taxCoof = coof(tax);
+    const marginCoof = coof(margin);
+
+    return cost * taxCoof * marginCoof;
 }
 
 const price1 = salesPrice(savikaina1);
@@ -46,6 +51,7 @@ const price3 = salesPrice(savikaina3);
 console.log(savikaina1, '>>>', price1);
 console.log(savikaina2, '>>>', price2);
 console.log(savikaina3, '>>>', price3);
+
 console.log('-------------ciklas-------------------');
 const student1 = [10, 2, 8, 4, 6];
 const student2 = [6, 7, 8, 9, 10];
