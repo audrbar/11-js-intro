@@ -20,3 +20,5 @@ Event listeners:
     - click
     - scroll
     - keyPress
+
+https://github.com/DeeBee123/BIT-welcome/blob/master/slides.md
