@@ -13,6 +13,7 @@
     "strings": "nodemon ./js/03-strings.js",
     "numbers": "nodemon ./js/02-numbers.js",
     "labas": "nodemon ./js/01-labas.js",
+    "home": "nodemon ./js/00-home.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": ["js", "intro"],
