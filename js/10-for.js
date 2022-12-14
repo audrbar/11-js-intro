@@ -40,8 +40,7 @@ let sum = 0
 
 for (let i = 0; i < count; i++) {
     sum += marks[i];
-    console.log(marks, marks[i], sum);
- 
+    console.log(i, marks, marks[i], sum);
 }
 
 const average = sum / count;
@@ -71,9 +70,10 @@ console.log('---------Marks Average Count Function--------');
 
 function marksAverage(marksArray) {
     let sum = 0;
-    for (let i = 0; i < marksArray; i++) {
-        sum / marksArray.length;
+    for (let i = 0; i < marksArray.length; i++) {
+        sum += marksArray[i];
     }
+    return sum / marksArray.length;
 };
 
 const student1 = {
@@ -91,10 +91,17 @@ const student3 = {
     marks: [6, 8, 9 , 6]
 };
 
+const student4 = {
+    name: 'Marius',
+    marks: []
+};
+
 const vidurkis1 = marksAverage(student1.marks);
 const vidurkis2 = marksAverage(student2.marks);
 const vidurkis3 = marksAverage(student3.marks);
+const vidurkis4 = marksAverage(student4.marks);
 
 console.log(`${student1.name} pazymiu vidurkis yra: ${vidurkis1}.`);
 console.log(`${student2.name} pazymiu vidurkis yra: ${vidurkis2}.`);
 console.log(`${student3.name} pazymiu vidurkis yra: ${vidurkis3}.`);
+console.log(`${student4.name} pazymiu vidurkis yra: ${vidurkis4}.`);
