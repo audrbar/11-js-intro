@@ -10,54 +10,33 @@ console.clear();
 const currency = 'EUR';
 const goods = [
     {
-        name: 'bananas',
+        name: 'Bananas',
         price: 2,
         inStock: 10
     },
     {
-        name: 'agurkas',
+        name: 'Agurkas',
         price: 3,
         inStock: 10
     },
     {
-        name: 'pomidoras',
+        name: 'Pomidoras',
         price: 1.57,
         inStock: 30
     }
-]
-const i = 0;
-function shop() {
-
-};
-shop (goods, currency);
-
+];
 console.log('MUSU PARDUOTUVE:');
 console.log('----------------');
-console.log(`${i +1}\) ${goods[0].name} kainuoja ${goods[0].price} ${currency} ir turime ju ${goods[0].inStock} vienetu.`);
-console.log(`${i +1}\) ${goods[0].name} kainuoja ${goods[1].price} ${currency} ir turime ju ${goods[0].inStock} vienetu.`);
-console.log(`${i +1}\) ${goods[0].name} kainuoja ${goods[2].price} ${currency} ir turime ju ${goods[0].inStock} vienetu.`);
-
-
-
-
-console.log('---------Marks Average Count--------');
-const marks = [10, 2, 8, 4, 6];
-const count = marks.length;
-let sum = 0
-
-for (let i = 0; i < count; i++) {
-    sum += marks[i];
-    console.log(i, marks, marks[i], sum);
-}
-
-const average = sum / count;
-console.log('Pazymiu vidurkis: ', average);
-
-function marksAverage(marksArray) {
-    let sum = 0;
-    for (let i = 0; i < marksArray.length; i++) {
-        sum += marksArray[i];
+const i = 0;
+let sumGoods = 0;
+function shop (goods) {
+    const count = goods.length;
+    for (let i = 0; i < count; i++) {
+        console.log(`${i +1}\) ${goods[i].name} kainuoja ${goods[i].price} ${currency} ir turime ju ${goods[i].inStock} vienetu.`);
+        sumGoods += goods[i].price * goods[i].inStock;
     }
-    return sum / marksArray.length;
-};
-console.log('Pazymiu vidurkis: ', average);
+    return sumGoods;
+}
+shop (goods);
+console.log('----------------');
+console.log(`Viso asortimento kaina: ${sumGoods} ${currency}`);
