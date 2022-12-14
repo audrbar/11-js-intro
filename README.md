@@ -21,4 +21,7 @@ Event listeners:
     - scroll
     - keyPress
 
+const a = 5;
+inicijavimo budas, kintamasis, reiksme
+
 https://github.com/DeeBee123/BIT-welcome/blob/master/slides.md
