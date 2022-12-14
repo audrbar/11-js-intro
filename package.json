@@ -4,7 +4,8 @@
   "description": "JS Intro",
   "main": "index.js",
   "scripts": {
-    "shop": "nodemon ./tasks/01-shop.js",
+    "shop": "nodemon ./tasks/02-shop.js",
+    "home": "nodemon ./tasks/01-home.js",
     "for": "nodemon ./js/10-for.js",
     "if": "nodemon ./js/09-if.js",
     "function": "nodemon ./js/08-function.js",
@@ -15,7 +16,6 @@
     "strings": "nodemon ./js/03-strings.js",
     "numbers": "nodemon ./js/02-numbers.js",
     "labas": "nodemon ./js/01-labas.js",
-    "home": "nodemon ./js/00-home.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": ["js", "intro"],
