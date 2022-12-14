@@ -19,17 +19,23 @@ const goods = [
         price: 3,
         inStock: 10
     },
-    {name: 'pomidoras',
+    {
+        name: 'pomidoras',
         price: 1.57,
         inStock: 30
     }
 ]
-
+const i = 0;
 function shop() {
 
 };
 shop (goods, currency);
 
+console.log('MUSU PARDUOTUVE:');
+console.log('----------------');
+console.log(`${i +1}\) ${goods[0].name} kainuoja ${goods[0].price} ${currency} ir turime ju ${goods[0].inStock} vienetu.`);
+console.log(`${i +1}\) ${goods[0].name} kainuoja ${goods[1].price} ${currency} ir turime ju ${goods[0].inStock} vienetu.`);
+console.log(`${i +1}\) ${goods[0].name} kainuoja ${goods[2].price} ${currency} ir turime ju ${goods[0].inStock} vienetu.`);
 
 
 
