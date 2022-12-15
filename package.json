@@ -4,6 +4,7 @@
   "description": "JS Intro",
   "main": "index.js",
   "scripts": {
+    "rangeSum": "nodemon ./tasks/03-rangeSum.js",
     "shop": "nodemon ./tasks/02-shop.js",
     "home": "nodemon ./tasks/01-home.js",
     "for": "nodemon ./js/10-for.js",
