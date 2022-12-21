@@ -4,6 +4,8 @@
   "description": "JS Intro",
   "main": "index.js",
   "scripts": {
+    "biggestNumber":  "nodemon ./tasks/05-biggestNumber.js",
+    "reverseString": "nodemon ./tasks/04-reverseString.js",
     "rangeSum": "nodemon ./tasks/03-rangeSum.js",
     "shop": "nodemon ./tasks/02-shop.js",
     "home": "nodemon ./tasks/01-home.js",
