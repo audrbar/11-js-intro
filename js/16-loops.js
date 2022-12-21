@@ -3,7 +3,7 @@ console.clear();
 LOOP - ciklas
 tevas - for
 vaikai (isvestiniai) - while, for-of, for-on, for-in, foreeach
-next level - map, sort, filter, reduce, ...
+next level - HOP (hyer order function) map, sort, filter, reduce, ...
 */
 const marks = [10, 2, 8, 4, 6];
 
@@ -53,3 +53,45 @@ function sumavimasForeach(mark) {
 }
 marks.forEach(sumavimasForeach);
 console.log('Foreach3:', sumForeach3 / marks.length);
+
+console.log('-----FOR-OBJ-iteruoja per objekta------');
+
+const user = {
+    name: 'Petras',
+    age: 99,
+    isMarried: true,
+    favoriteNumber: 13,
+    children: 5,
+    grandChildren: 25
+}
+
+let sumForObj = 0;
+const userKeys = Object.keys(user);
+console.log(userKeys);
+for (let i = 0; i < userKeys.length; i++) {
+    const key = userKeys[i];
+    const value = user[key];
+    console.log(key, ':', user[key]);
+    if (typeof value === 'number' && isFinite(value) && value > 0) {
+        sumForObj += value;
+    }
+}
+console.log('For-Obj:', sumForObj, '-->', 142);
+
+console.log('--------FOR-IN---------');
+
+let sumForIn = 0;
+console.log(userKeys);
+for (const key in user) {
+    const value = user[key];
+    if (typeof value === 'number' && isFinite(value) && value > 0) {
+        sumForObj += value;
+    }
+}
+console.log('For-In:', sumForIn, '-->', 142);
+
+console.log('--------MAP---------');
+
+// Map - grazinamas naijas to pacio dydzio masyvas
+// su modifikuotomis reiksmemis
+

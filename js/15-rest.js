@@ -12,6 +12,7 @@ console.log(visiKiti);
 console.log('--------------------------------');
 const person = {
     name: 'Petras',
+    age:
     isMarried: true,
     favorite: {
         color: 'red',
@@ -26,6 +27,7 @@ console.log(other);
 console.log('--------Du parametrai---------');
 
 function sum(a, b) {
+    console.log('ARGS', a, b, arguments, [...arguments]);
     return a + b;
 }
 
@@ -46,7 +48,9 @@ function arraySum(list) {
 
 const s2 = arraySum([10, 2, 8, 4, 6]);
 console.log(s2);
+
 console.log('--------Kitas---------');
+
 function sudetis(...args) {
     let total = 0;
 
@@ -61,8 +65,10 @@ const s3 = sudetis(10, 2, 8, 4, 6);
 console.log(s3);
 
 console.log('--------Dar kitas---------');
+
 function product() {
     let total = 1;
+    
     for (let i = 0; i <[...arguments].lenght; i++) {
         totalSum *= [...arguments][i];
     }

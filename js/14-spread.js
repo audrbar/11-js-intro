@@ -44,6 +44,8 @@ console.log(numbers);
 console.log(numbers2);
 console.log(numbers3);
 
+// SPREAD - išrašymas/iškopijavimas
+
 const person = {
     name: 'Maryte',
     age: 88,
@@ -71,17 +73,7 @@ console.log(person2.car.brand);
 
 const { childrenCount, happy, favoriteColor } = person2;
 console.log(childrenCount, happy, favoriteColor);
-/* Footer
-© 2022 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-*/
 
-// Spread - israsymas, iskopijavimas
 console.clear();
 
 const a = ['a', 'aa'];
@@ -93,11 +85,21 @@ const doubleCBA = [...c, ...b, 222, ...a];
 console.log(doubleABC);
 console.log(doubleCBA);
 
-const oABC = { ...a, gg: 'gg', cc: 'nebe CC' };
+const oa = { a: 'a', aa: 'aa' };
+const ob = { b: 'b', bb: 'bb' };
+const oc = { c: 'c', cc: 'cc' };
 
+const oABC = { ...oa, ...oc, gg: 'gg', ...ob, cc: 'nebe CC' };
+console.log(oABC);
+console.log(oABC.cc);
+console.log(oABC.gg);
 
 const user = {
     name: 'Username',
-    password: 'pasword',
+    password: 'pasword12',
 };
 console.log(user);
+
+const user2 = { ...user, name: 'Petras' };
+console.log(user2);
+console.log(user2.name);
