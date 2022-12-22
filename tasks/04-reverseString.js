@@ -7,8 +7,16 @@ function reverseString(str) {
     if (typeof str !== 'string') {
         return `ERROR: duok stringa, o ne ${typeof str}!`;
     }
-    // if (!str) {
-    //     return `ERROR: duok stringa, o ne ${typeof str}!`;
+    // if (str === undefined) {
+    //     return 'ERROR: duok stringa, o ne undefined!';
+    // if (typeof str === 'number') {
+    //     return 'ERROR: duok stringa, o ne number!';
+    // if (typeof str === 'boolean') {
+    //     return 'ERROR: duok stringa, o ne boolean!';
+    // if (typeof str === 'object') {
+    //     return 'ERROR: duok stringa, o ne object!';
+    // if (typeof str === 'function') {
+    //     return 'ERROR: duok stringa, o ne function!';
     // }
 
     let text = '';
@@ -34,22 +42,22 @@ function reverseString(str) {
     return text;
 }
 
-// console.log(reverseString());
-// console.log(reverseString(undefined));
-// console.log(reverseString(5));
-// console.log(reverseString(true));
-// console.log(reverseString(false));
-// console.log(reverseString(null));
-// console.log(reverseString([]));
-// console.log(reverseString({}));
-// console.log(reverseString(function () { }));
-// console.log(reverseString(''), '-->', '');
+console.log(reverseString());
+console.log(reverseString(undefined));
+console.log(reverseString(5));
+console.log(reverseString(true));
+console.log(reverseString(false));
+console.log(reverseString(null));
+console.log(reverseString([]));
+console.log(reverseString({}));
+console.log(reverseString(function () { }));
+console.log(reverseString(''), '-->', '');
 
-// console.log(reverseString('a'), '-->', 'a');
-// console.log(reverseString('g'), '-->', 'g');
-// console.log(reverseString('fff'), '-->', 'fff');
-// console.log(reverseString('asdsa'), '-->', 'asdsa');
-// console.log(reverseString('sedek uzu kedes'), '-->', 'sedek uzu kedes');
+console.log(reverseString('a'), '-->', 'a');
+console.log(reverseString('g'), '-->', 'g');
+console.log(reverseString('fff'), '-->', 'fff');
+console.log(reverseString('asdsa'), '-->', 'asdsa');
+console.log(reverseString('sedek uzu kedes'), '-->', 'sedek uzu kedes');
 console.log(reverseString('sula'), '-->', 'alus');
 console.log(reverseString('abcdef'), '-->', 'fedcba');
 console.log(reverseString('qwerty'), '-->', 'ytrewq');
