@@ -43,3 +43,4 @@ console.log(digitCount(-3.14), '-->', 3);
 console.log(digitCount(1000000000000000000000), '-->', 22);
 console.log(digitCount(0.000000000000000000001), '-->', 22);
 console.log(digitCount(1000000000000000000000.000000000000000000001), '-->', 22);
+// dalinti is 10
