@@ -1,5 +1,5 @@
 console.clear();
-// Rest operator - surenka likusias nepaimtas reiksmes destrukt8rizuojant
+// Rest operator - surenka likusias nepaimtas reiksmes destrukturizuojant
 
 const marks = [10, 2, 8, 4, 6];
 const [first, second, ...visiKiti] = marks;
@@ -12,7 +12,7 @@ console.log(visiKiti);
 console.log('--------------------------------');
 const person = {
     name: 'Petras',
-    age:
+    age: 99,
     isMarried: true,
     favorite: {
         color: 'red',

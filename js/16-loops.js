@@ -92,6 +92,6 @@ console.log('For-In:', sumForIn, '-->', 142);
 
 console.log('--------MAP---------');
 
-// Map - grazinamas naijas to pacio dydzio masyvas
+// Map - grazinamas naujas to pacio dydzio masyvas
 // su modifikuotomis reiksmemis
 
