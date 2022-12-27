@@ -2,8 +2,10 @@
   "name": "11-js-intro",
   "version": "1.0.0",
   "description": "JS Intro",
+  "type": "module",
   "main": "index.js",
   "scripts": {
+    "class":  "nodemon ./class/index.js",
     "biggestNumber":  "nodemon ./tasks/07-biggestNumber.js",
     "rangeDivide":  "nodemon ./tasks/06-rangeDivide.js",
     "digitCount":  "nodemon ./tasks/05-digitCount.js",
