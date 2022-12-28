@@ -1,0 +1,5 @@
+class Shopy {
+
+}
+
+export { Shopy };
