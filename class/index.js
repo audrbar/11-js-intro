@@ -3,13 +3,25 @@ console.log('Class ...');
 // Objektinis kodo rasymo budas
 // import Student from "./Student";
 // const Student = require('./Student');
-import Studentas from './Student.js';
+// import Studentas from './Student.js';
+// import * as x from './Student.js';
+// then use x.Student
+import { Student as Studentas } from './Student.js';
 
 const petras = new Studentas('Petras', 2000);
-const maryte = new Studentas('Maryte', 2003);
 
-console.log(Studentas);
+petras.addMarks(0, 2, 22, 10);
+petras.addMark(8);
+petras.addMark(10);
+petras.addMark(7);
+petras.addMark(-9);
+petras.addMark(3.14);
+petras.addMark(9);
+petras.addMark(0);
+petras.addMark(NaN);
+
+petras.marks = [10];
+console.log(petras.name, petras.getName());
 console.log(petras);
-console.log(petras.name, petras.birthYear, petras.isMaried);
-console.log(maryte);
-console.log(maryte.name, maryte.birthYear, maryte.isMaried);
+console.log(petras.marks);
+console.log(petras.marksAverage());

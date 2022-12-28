@@ -16,3 +16,10 @@ function areYouPlayingBanjo(name) {
 }
 console.log(areYouPlayingBanjo('renald'));
 
+sum = numbers => numbers.reduce((a, b) => a + b, 0);
+console.log(sum([1, 5.2, 4, 0, -1]));
+
+/*for (let i = 0; i < count; i++) {
+    sum += marks[i];
+    console.log(i, marks, marks[i], sum);
+}*/
