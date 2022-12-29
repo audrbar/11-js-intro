@@ -1,18 +1,14 @@
 console.clear();
 import { Shopy } from './Shopy.js';
-// komentarai, kurie prasideda "KOMENTARAS" nera spausdinami i console 🎅🚀📚
 
-import { Shop } from './Shop.js';
-
-const onlineKioskas = new Shop('Meskiuko kioskas', 'EUR');
-
+const onlineKioskas = new Shopy('Meskiuko kioskas', 'EUR');
+console.log('Shop:', onlineKioskas);
 onlineKioskas.intro();
 // Hi, we are "Meskiuko kioskas".\nUse .items() method to get list of items to purchase.\nUse .order() method to get your order details.
-
 onlineKioskas.addItem('obuolys', 130);
 // KOMENTARAS: pavadinimas mazosiomis
 // "Meskiuko kioskas" sells obuolys for 1.30 EUR now!
-
+/*
 onlineKioskas.addItem('morka', 65);
 // "Meskiuko kioskas" sells morka for 0.65 EUR now!
 
@@ -64,7 +60,7 @@ onlineKioskas.order('Augustas');
     ]
 }
 */
-
+/*
 onlineKioskas.order('Barbora');
 /*
 {
@@ -76,7 +72,7 @@ onlineKioskas.order('Barbora');
     ]
 }
 */
-
+/*
 onlineKioskas.orderPrice('Augustas');
 // Augustas order: 4.40 EUR.
 
@@ -122,7 +118,7 @@ onlineKioskas.order('John');
     ]
 }
 */
-
+/*
 onlineKioskas.items();
 
 onlineKioskas.orderPrice('John');
@@ -137,3 +133,4 @@ onlineKioskas.shopSummary();
 // Profit: 10.80 EUR
 // Possible profit: 5.60 EUR
 // ====================
+*/
