@@ -8,20 +8,15 @@ onlineKioskas.intro();
 onlineKioskas.addItem('obuolys', 130);
 // KOMENTARAS: pavadinimas mazosiomis
 // "Meskiuko kioskas" sells obuolys for 1.30 EUR now!
-/*
 onlineKioskas.addItem('morka', 65);
 // "Meskiuko kioskas" sells morka for 0.65 EUR now!
-
 onlineKioskas.addItem('arbata', 95);
 // "Meskiuko kioskas" sells arbata for 0.95 EUR now!
-
 onlineKioskas.addItem('bulves', 135);
 // "Meskiuko kioskas" sells bulves for 1.35 EUR now!
-
 onlineKioskas.addItem('cepelinai', 195);
 // "Meskiuko kioskas" sells cepelinai for 1.95 EUR now!
-
-onlineKioskas.items();
+onlineKioskas.itemss();
 // KOMENTARAS: pavadinimai "gramatiskai taisyklingai"
 // Items for sale at "Meskiuko kioskas":
 // ====================
@@ -31,7 +26,7 @@ onlineKioskas.items();
 // 4) Bulves - 1.35 EUR;
 // 5) Cepelinai - 1.95 EUR;
 // ====================
-
+/*
 onlineKioskas.updatePrice('bulves', 90);
 // "Meskiuko kioskas" updated price and sells bulves for 0.90 EUR now!
 
