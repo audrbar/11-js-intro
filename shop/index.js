@@ -16,7 +16,7 @@ onlineKioskas.addItem('bulves', 135);
 // "Meskiuko kioskas" sells bulves for 1.35 EUR now!
 onlineKioskas.addItem('cepelinai', 195);
 // "Meskiuko kioskas" sells cepelinai for 1.95 EUR now!
-onlineKioskas.itemss();
+onlineKioskas.items();
 // KOMENTARAS: pavadinimai "gramatiskai taisyklingai"
 // Items for sale at "Meskiuko kioskas":
 // ====================
