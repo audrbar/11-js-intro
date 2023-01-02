@@ -160,3 +160,50 @@ function minMax(arr){
 console.log(minMax([1, 2, 3, 4, 5]));
 console.log([[2334454, 5], [5, 2334454]]);
 console.log([[5], [5, 5]]);
+
+console.clear();
+
+function findSmallestInt(args) {
+        return Math.min(...args);
+}
+console.log(findSmallestInt([78,56,232,12,8]));
+console.log(findSmallestInt([78,56,232,12,18]));
+console.log(findSmallestInt([78,56,232,412,228]));
+console.log(findSmallestInt([78,56,232,12,0]));
+console.log(findSmallestInt([1,56,232,12,8]));
+
+function rentalCarCost(d) {
+    if (d >= 3 && d < 7) {
+     return d * 40 - 20;
+   }
+   
+   else if (d >= 7) {
+   return d * 40 - 50;
+   }
+   else
+   return d * 40;
+ }
+//  return d * 40 - (d >= 7 ? 50 : (d >= 3 ? 20 : 0));
+ console.log(rentalCarCost(1), 40);
+ console.log(rentalCarCost(2), 80);
+
+ function doubleChar(str) {
+    return str.split('').map(c => c + c).join('');
+}
+console.log(doubleChar("abcd"), "aabbccdd");
+console.log(doubleChar("Adidas"), "AAddiiddaass");
+console.log(doubleChar("1337"), "11333377");
+console.log(doubleChar("illuminati"), "iilllluummiinnaattii");
+console.log(doubleChar("123456"), "112233445566");
+console.log(doubleChar("%^&*("), "%%^^&&**((");
+
+console.clear();
+
+function invert(array) {
+    return `[ ${array.map(x=> x*-1).join(' , ')} ]`;
+}
+
+console.log(invert([1,2,3,4,5]), [-1,-2,-3,-4,-5]);
+console.log(invert([1,-2,3,-4,5]), [-1,2,-3,4,-5]);
+console.log(invert([]), []);
+console.log(invert([0]), [-0]);
