@@ -24,14 +24,139 @@ console.clear();
     console.log(i, marks, marks[i], sum);
 }*/
 
-function sumMix(x) {
+// function sumMix(x) {
+//     let sum = 0;
+//     for(let i = 0; i < x.length; i++){
+//     if(typeof x[i] === 'string'){
+//       x[i] = Number(x[i]);
+//     }
+//      sum += x[i];
+//     }
+//     return sum;
+//     }
+// console.log(sumMix([9, 3, '7', '3']));
+
+function positiveSum(arr) {
     let sum = 0;
-    for(let i = 0; i < x.length; i++){
-    if(typeof x[i] === 'string'){
-      x[i] = Number(x[i]);
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i] > 0) sum += arr[i]
     }
-     sum += x[i];
+    return sum
+}
+    console.log(positiveSum([1,2,3,4,5]),15);
+    console.log(positiveSum([1,-2,3,4,5]),13);
+    console.log(positiveSum([]),0);
+    console.log(positiveSum([-1,-2,-3,-4,-5]),0);
+    console.log(positiveSum([-1,2,3,4,-5]),9);
+
+    function bmi(weight, height) {
+        let bmi = weight / (height**2);
+        if(bmi < 18.5){
+          return "Underweight";
+        }else if (bmi < 25){
+          return "Normal";
+        }else if (bmi < 30){
+          return "Overweight";
+        }else{
+          return "Obese";
+        }
+}
+console.log(bmi(50, 1.80), "Normal");
+
+// return bmi < 18.5 ? "Underweight" : bmi <=25 ? "Normal" : bmi <= 30 ? "Overweight" : "Obese";
+
+// Write function bmi that calculates body mass index (bmi = weight / height2).
+// if bmi <= 18.5 return "Underweight"
+// if bmi <= 25.0 return "Normal"
+// if bmi <= 30.0 return "Overweight"
+// if bmi > 30 return "Obese"
+
+function greet(name){
+    return `"Hello, ${name} how are you doing today?");`
+}
+console.log(greet("Ryan"), "Hello, Ryan how are you doing today?");
+console.log(greet("Shingles"), "Hello, Shingles how are you doing today?");
+
+// Make a function that will return a greeting statement that uses an input; your program should return, "Hello, <name> how are you doing today?".
+// [Make sure you type the exact thing I wrote or the program may not execute properly]
+
+function paperwork(n, m) {
+    let paperwork = n*m;
+    if(n < 0 || m < 0) {
+        return 0;
+    } else {
+        return paperwork;
     }
-    return sum;
-    }
-console.log(sumMix([9, 3, '7', '3']));
+}
+// return n < 0 || m < 0 ? 0 : n * m;
+// Your task is to calculate how many blank pages do you need. If n < 0 or m < 0 return 0.
+console.log(paperwork(5,5), 25, 'Failed at paperwork(5, 5)');
+console.log(paperwork(5,-5), 0, 'Failed at paperwork(5, -5)');
+console.log(paperwork(-5,-5), 0, 'Failed at paperwork(-5, -5)');
+console.log(paperwork(-5,5), 0, 'Failed at paperwork(-5, 5)');
+console.log(paperwork(5,0), 0, 'Failed at paperwork(5, 0)');
+
+// It's pretty straightforward. Your goal is to create a function that removes the first and last characters of a string. You're given one parameter, the original string. You don't have to worry with strings with less than two characters.
+function removeChar(str){
+    return str.slice(1, -1);
+   };
+   console.log(removeChar('eloquent'), 'loquen');
+   console.log(removeChar('country'), 'ountr');
+   console.log(removeChar('person'), 'erso');
+   console.log(removeChar('place'), 'lac');
+   console.log(removeChar('ooopsss'), 'oopss');
+
+
+   function abbrevName(name){
+    return name.split(" ").map(el => el[0].toUpperCase()).join(".");
+}
+console.log(abbrevName("Sam Harris"), "S.H");
+console.log(abbrevName("Patrick Feenan"), "P.F");
+console.log(abbrevName("Evan Cole"), "E.C");
+console.log(abbrevName("P Favuzzi"), "P.F");
+console.log(abbrevName("David Mendieta"), "D.M");
+
+function boolToWord( bool ){
+    return bool === true ? 'Yes' : 'No';
+}
+console.log(boolToWord(true), 'Yes')
+console.log(boolToWord(false), 'No')
+
+
+function smash (words) {
+    return words.join(' ');
+};
+console.log(smash(["hello", "world"]), "hello world");
+console.log(smash(["hello", "amazing", "world"]), "hello amazing world");
+console.log(smash(["this", "is", "a", "really", "long", "sentence"]), "this is a really long sentence");
+
+function litres(time) {
+    return Math.floor(time/2);
+}
+
+console.log(litres(2), 1, 'should return 1 litre');
+console.log(litres(1.4), 0, 'should return 0 litres');
+console.log(litres(12.3), 6, 'should return 6 litres');
+console.log(litres(0.82), 0, 'should return 0 litres');
+console.log(litres(11.8), 5, 'should return 5 litres');
+console.log(litres(1787), 893, 'should return 893 litres');
+console.log(litres(0), 0, 'should return 0 litres');
+
+function sumTwoSmallestNumbers(numbers) {  
+    let first = Math.min(...numbers)
+    numbers.splice(numbers.indexOf(first), 1)
+    let second = Math.min(...numbers)
+    return first + second
+}
+console.log(sumTwoSmallestNumbers([5, 8, 12, 19, 22]), 13 , "Sum should be 13");
+console.log(sumTwoSmallestNumbers([15, 28, 4, 2, 43]), 6 , "Sum should be 6");
+console.log(sumTwoSmallestNumbers([3, 87, 45, 12, 7]), 10 , "Sum should be 10");
+console.log(sumTwoSmallestNumbers([23, 71, 33, 82, 1]), 24 , "Sum should be 24");
+console.log(sumTwoSmallestNumbers([52, 76, 14, 12, 4]), 16 , "Sum should be 16");
+
+function minMax(arr){
+    return [Math.min(...arr), Math.max(...arr)]; // fix me!
+}
+console.log(minMax([1, 2, 3, 4, 5]));
+console.log([[2334454, 5], [5, 2334454]]);
+console.log([[5], [5, 5]]);
