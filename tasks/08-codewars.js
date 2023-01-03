@@ -207,3 +207,51 @@ console.log(invert([1,2,3,4,5]), [-1,-2,-3,-4,-5]);
 console.log(invert([1,-2,3,-4,5]), [-1,2,-3,4,-5]);
 console.log(invert([]), []);
 console.log(invert([0]), [-0]);
+
+// Given a month as an integer from 1 to 12, return to which quarter of the year it belongs as an integer number.
+const quarterOf = (month) => {
+    if (month < 4) return 1;
+    if (month < 7) return 2;
+    if (month < 10) return 3;
+    return 4;  
+}
+// return month < 4 ? 1 : month < 7 ? 2 : month < 10 ? 3 : 4;
+console.log(quarterOf(3), 1);
+console.log(quarterOf(8), 3);
+console.log(quarterOf(11), 4);
+
+// If one of the flowers has an even number of petals and the other has an odd number of petals it means they are in love.
+function lovefunc(flower1, flower2){
+    if(flower1 % 2 == 0 && flower2 % 2 == 1){
+        return true;
+    }
+     if(flower1 % 2 == 1 && flower2 % 2 == 0){
+       return true;
+    }
+    else{
+        return false;
+        }
+}
+// return flower1 % 2 !== flower2 % 2;
+console.log(lovefunc(1,4), true);
+console.log(lovefunc(2,2), false);
+console.log(lovefunc(0,1), true);
+console.log(lovefunc(0,0), false);
+
+// Write a program where Alex can input (n) how many times the hoop goes round and it will return him an encouraging message :)
+function hoopCount (n) {
+    return n < 11 ? "Keep at it until you get it" : "Great, now move on to tricks";    
+ }
+console.log(hoopCount(3),"Keep at it until you get it");
+console.log(hoopCount(11),"Great, now move on to tricks");
+
+console.clear();
+
+function removeEveryOther(arr){
+    return arr.filter((el,i) => i %2 ==0);  
+}
+console.log();
+console.log(removeEveryOther(['Hello', 'Goodbye', 'Hello Again']),['Hello', 'Hello Again']);
+console.log(removeEveryOther([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]),[1, 3, 5, 7, 9]);
+console.log(removeEveryOther([[1, 2]]), [[1, 2]]);
+console.log(removeEveryOther([['Goodbye'], {'Great': 'Job'}]),[['Goodbye']]);
