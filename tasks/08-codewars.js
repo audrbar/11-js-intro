@@ -245,8 +245,6 @@ function hoopCount (n) {
 console.log(hoopCount(3),"Keep at it until you get it");
 console.log(hoopCount(11),"Great, now move on to tricks");
 
-console.clear();
-
 function removeEveryOther(arr){
     return arr.filter((el,i) => i %2 ==0);  
 }
@@ -255,3 +253,15 @@ console.log(removeEveryOther(['Hello', 'Goodbye', 'Hello Again']),['Hello', 'Hel
 console.log(removeEveryOther([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]),[1, 3, 5, 7, 9]);
 console.log(removeEveryOther([[1, 2]]), [[1, 2]]);
 console.log(removeEveryOther([['Goodbye'], {'Great': 'Job'}]),[['Goodbye']]);
+
+
+let number = function(array) {
+    return array.map(function (line, index) {
+        return (index + 1) + ": " + line;
+      });
+}
+// return array.map((s, i) => `${++i}: ${s}`);
+console.log(number([]), [], 'Empty array should return empty array');
+console.log(number(["a", "b", "c"]), ["1: a", "2: b", "3: c"], 'Return the correct line numbers');
+
+console.clear();
