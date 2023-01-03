@@ -200,7 +200,7 @@ console.log(doubleChar("%^&*("), "%%^^&&**((");
 console.clear();
 
 function invert(array) {
-    return `[ ${array.map(x=> x*-1).join(' , ')} ]`;
+    return array.map(i => i === 0 ? i : -i);
 }
 
 console.log(invert([1,2,3,4,5]), [-1,-2,-3,-4,-5]);
