@@ -267,4 +267,73 @@ console.log(betterThanAverage([12, 23, 34, 45, 56, 67, 78, 89, 90], 9), false);
 console.log(betterThanAverage([41, 75, 72, 56, 80, 82, 81, 33], 50), false);
 console.log(betterThanAverage([29, 55, 74, 60, 11, 90, 67, 28], 21), false);
 
+// Given an array of integers, remove the smallest value. Do not mutate the original array/list. If there are multiple elements with the same value, remove the one with a lower index. If you get an empty array/list, return an empty array/list. Don't change the order of the elements that are left.
+
+function removeSmallest(numbers) {
+    let min = Math.min(...numbers);
+    const index = numbers.indexOf(min);
+    return numbers.filter((_, e) => e !== index);
+}
+// const removeSmallest = numbers => numbers.filter((n,i) => i !== numbers.indexOf(Math.min(...numbers)));
+console.log(removeSmallest([1, 2, 3, 4, 5]), [2, 3, 4, 5], "Wrong result for [1, 2, 3, 4, 5]");
+console.log(removeSmallest([5, 3, 2, 1, 4]), [5, 3, 2, 4], "Wrong result for [5, 3, 2, 1, 4]");
+console.log(removeSmallest([2, 2, 1, 2, 1]), [2, 2, 2, 1], "Wrong result for [2, 2, 1, 2, 1]");
+console.log(removeSmallest([]), [], "Wrong result for []");
+
+//Your task is to return number of people who are still in the bus after the last bus station (after the last array). Even though it is the last bus stop, the bus is not empty and some people are still in the bus, and they are probably sleeping there :D
+let number = function(busStops){
+    let people = 0;
+    for (let stop of busStops) {
+      people += stop[0] - stop[1];
+    }
+    return people;
+}
+// const number = busStops => busStops.reduce((p,n) => p+n[0]-n[1],0)
+// const number = (busStops) => busStops.reduce((rem, [on, off]) => rem + on - off, 0);
+console.log(number([[10,0],[3,5],[5,8]]),5);
+console.log(number([[3,0],[9,1],[4,10],[12,2],[6,1],[7,10]]),17);
+console.log(number([[3,0],[9,1],[4,8],[12,2],[6,1],[7,8]]),21);
+console.log(number([[0,0]]),0);
+
+// You are given an odd-length array of integers, in which all of them are the same, except for one single number. Complete the method which accepts such an array, and returns that single different number.
+function stray(numbers) {
+    const numbetSorted = numbers.sort();
+    return numbetSorted[0] !== numbetSorted[1] ? numbetSorted[0] : numbetSorted[numbetSorted.length - 1];
+}
+// return numbers.reduce((x, y) => x ^ y);
+console.log(stray([1, 1, 2]), 2);
+console.log(stray([1, 2, 1]), 2);
+console.log(stray([2, 1, 1]), 2);
+
+// Complete the function that accepts a string parameter, and reverses each word in the string. All spaces in the string should be retained.
+function reverseWords(str) {
+    let reverseWordArr = str.split(" ").map(word => word.split("").reverse().join(""));
+    return reverseWordArr.join(" ");
+}
+// return str.split(' ').map( str => str.split('').reverse().join('') ).join(' ');
+// return str.split("").reverse().join("").split(" ").reverse().join(" ");
+console.log(reverseWords('The quick brown fox jumps over the lazy dog.'), 'ehT kciuq nworb xof spmuj revo eht yzal .god');
+console.log(reverseWords('apple'), 'elppa');
+console.log(reverseWords('a b c d'), 'a b c d');
+console.log(reverseWords('double  spaced  words'), 'elbuod  decaps  sdrow');
+
 console.clear();
+// Implement the function which takes an array containing the names of people that like an item.
+function likes(names) {
+    return names.length === 0 ? 'no one likes this'
+         : names.length === 1 ? `${names[0]} likes this`
+         : names.length === 2 ? `${names[0]} and ${names[1]} like this`
+         : names.length === 3 ? `${names[0]}, ${names[1]} and ${names[2]} like this`
+         : `${names[0]}, ${names[1]} and ${names.length - 2} others like this`;
+}
+console.log(likes([]), 'no one likes this');
+console.log(likes(['Peter']), 'Peter likes this');
+console.log(likes(['Jacob', 'Alex']), 'Jacob and Alex like this');
+console.log(likes(['Max', 'John', 'Mark']), 'Max, John and Mark like this');
+console.log(likes(['Alex', 'Jacob', 'Mark', 'Max']), 'Alex, Jacob and 2 others like this');
+console.log(likes(['Alex', 'Jacob', 'Mark', 'Max', 'Meda']), 'Alex, Jacob and 3 others like this');
+
+
+
+
+
