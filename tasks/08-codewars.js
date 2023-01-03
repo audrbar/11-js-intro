@@ -245,13 +245,26 @@ function hoopCount (n) {
 console.log(hoopCount(3),"Keep at it until you get it");
 console.log(hoopCount(11),"Great, now move on to tricks");
 
-console.clear();
 
 function removeEveryOther(arr){
     return arr.filter((el,i) => i %2 ==0);  
 }
-console.log();
 console.log(removeEveryOther(['Hello', 'Goodbye', 'Hello Again']),['Hello', 'Hello Again']);
 console.log(removeEveryOther([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]),[1, 3, 5, 7, 9]);
 console.log(removeEveryOther([[1, 2]]), [[1, 2]]);
 console.log(removeEveryOther([['Goodbye'], {'Great': 'Job'}]),[['Goodbye']]);
+
+// calculate the average and compare your score! Return True if you're better, else False!
+function betterThanAverage(classPoints, yourPoints) {
+    const sum = classPoints.reduce((a, b) => a + b, 0);
+    const avg = (sum / classPoints.length) || 0;
+    return avg < yourPoints ? 'True' : 'False';
+}
+// return yourPoints > classPoints.reduce((a, b) => a + b, 0) / classPoints.length;
+console.log(betterThanAverage([2, 3], 5), true);
+console.log(betterThanAverage([100, 40, 34, 57, 29, 72, 57, 88], 75), true);
+console.log(betterThanAverage([12, 23, 34, 45, 56, 67, 78, 89, 90], 9), false);
+console.log(betterThanAverage([41, 75, 72, 56, 80, 82, 81, 33], 50), false);
+console.log(betterThanAverage([29, 55, 74, 60, 11, 90, 67, 28], 21), false);
+
+console.clear();
