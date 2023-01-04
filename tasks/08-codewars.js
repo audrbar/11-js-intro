@@ -263,4 +263,44 @@ let number = function(array) {
 console.log(number([]), [], 'Empty array should return empty array');
 console.log(number(["a", "b", "c"]), ["1: a", "2: b", "3: c"], 'Return the correct line numbers');
 
+// Given a list of integers, determine whether the sum of its elements is odd or even. Give your answer as a string matching "odd" or "even". If the input array is empty consider it as: [0] (array with a zero).
+function oddOrEven(array) {
+    return array.reduce((a,b) => a + b, 0) % 2 === 0 ? 'even' : 'odd'; 
+}
+//   return arr.reduce((a,b)=>a+b,0) % 2 ? 'odd' : 'even';
+console.log(oddOrEven([0]), 'even');
+console.log(oddOrEven([1]), 'odd');
+console.log(oddOrEven([]), 'even');
+console.log(oddOrEven([0, 1, 5]), 'even');
+console.log(oddOrEven([0, 1, 3]), 'even');
+console.log(oddOrEven([1023, 1, 2]), 'even');
+
+// Function, which subtracts one list from another and returns the result. It should remove all values from list a, which are present in list b keeping their order. If a value is present in b, all of its occurrences must be removed from the other:
+function arrayDiff(a, b) {
+    return a.filter(i => !b.includes(i));
+}
+console.log(arrayDiff([1,2], [1]), [2], "a was [1,2], b was [1]");
+console.log(arrayDiff([1,2,2], [1]), [2,2], "a was [1,2,2], b was [1]");
+console.log(arrayDiff([1,2,2], [2]), [1], "a was [1,2,2], b was [2]");
+console.log(arrayDiff([1,2,2], []), [1,2,2], "a was [1,2,2], b was []");
+console.log(arrayDiff([], [1,2]), [], "a was [], b was [1,2]");
+console.log(arrayDiff([1,2,3], [1,2]), [3], "a was [1,2,3], b was [1,2]")
+
 console.clear();
+
+// Convert a string to a new string where each character in the new string is "(" if that character appears only once in the original string, or ")" if that character appears more than once in the original string. Ignore capitalization when determining if a character is a duplicate.
+function duplicateEncode(word){
+    let str = word.toLowerCase();
+    let unique = '';
+        for (var i = 0; i < str.length; i++) {
+        if (str.lastIndexOf(str[i]) === str.indexOf(str[i])) {
+            unique += '(';
+        } else
+        unique += ')';
+        }
+        return unique;
+}
+console.log(duplicateEncode("din"),"(((");
+console.log(duplicateEncode("recede"),"()()()");
+console.log(duplicateEncode("Success"),")())())","should ignore case");
+console.log(duplicateEncode("(( @"),"))((");
