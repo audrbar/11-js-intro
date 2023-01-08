@@ -286,8 +286,6 @@ console.log(arrayDiff([1,2,2], []), [1,2,2], "a was [1,2,2], b was []");
 console.log(arrayDiff([], [1,2]), [], "a was [], b was [1,2]");
 console.log(arrayDiff([1,2,3], [1,2]), [3], "a was [1,2,3], b was [1,2]")
 
-console.clear();
-
 // Convert a string to a new string where each character in the new string is "(" if that character appears only once in the original string, or ")" if that character appears more than once in the original string. Ignore capitalization when determining if a character is a duplicate.
 function duplicateEncode(word){
     let str = word.toLowerCase();
@@ -304,3 +302,67 @@ console.log(duplicateEncode("din"),"(((");
 console.log(duplicateEncode("recede"),"()()()");
 console.log(duplicateEncode("Success"),")())())","should ignore case");
 console.log(duplicateEncode("(( @"),"))((");
+
+// The cockroach is one of the fastest insects. Write a function which takes its speed in km per hour and returns it in cm per second, rounded down to the integer (= floored).
+function cockroachSpeed(s) {
+    return Math.floor(s * 1000 / 36);
+}
+// const cockroachSpeed = s => Math.floor(s / 0.036);
+console.log(cockroachSpeed(1.08), 30);
+console.log(cockroachSpeed(1.09), 30);
+console.log(cockroachSpeed(0), 0);
+
+// Complete the solution so that it returns true if the first argument(string) passed in ends with the 2nd argument (also a string).
+function solution(str, ending){
+    return str.endsWith(ending);
+}
+console.log(solution('abcde', 'cde'), true);
+console.log(solution('abcde', 'abc'), false);
+
+// Bob needs a fast way to calculate the volume of a cuboid with three values: the length, width and height of the cuboid. Write a function to help Bob with this calculation.
+class Kata {
+    static getVolumeOfCuboid(length, width, height) {
+      return length * width * height;
+    }
+}
+console.log(Kata.getVolumeOfCuboid(1,2,2),  4);
+console.log(Kata.getVolumeOfCuboid(6,2,5), 60);
+
+// You will be given a number and you will need to return it as a string in Expanded Form.
+function expandedForm(num) {
+    let str = String(num).split('');
+    for(let i = 0; i < str.length; i++ ){
+        for(let j = str.length - i; j > 1; j--){
+          if(str[i] == '0'){
+            i++;
+          }else{
+           str[i] += '0'; 
+          }
+        }
+    }
+    return str.filter(item => item != '0').join(' + ');
+}
+// const expandedForm = n => n.toString().split("").reverse().map((a, i) => a * Math.pow(10, i)).filter(a => a > 0).reverse().join(" + ");
+console.log(expandedForm(12), '10 + 2');
+console.log(expandedForm(42), '40 + 2');
+console.log(expandedForm(70304), '70000 + 300 + 4');
+
+// Write a function named setAlarm which receives two parameters. The first parameter, employed, is true whenever you are employed and the second parameter, vacation is true whenever you are on vacation. The function should return true if you are employed and not on vacation (because these are the circumstances under which you need to set an alarm). It should return false otherwise.
+function setAlarm(employed, vacation){
+    return employed == true && vacation == false ? true : false;
+}
+// const setAlarm = (employed, vacation) => employed && !vacation;
+console.log(setAlarm(true, true),  false,"Should be false.");
+console.log(setAlarm(false,true),  false, "Should be false.");
+console.log(setAlarm(true, false), true,"Should be true.");
+
+// Write a function feast that takes the animal's name and dish as arguments and returns true or false to indicate whether the beast is allowed to bring the dish to the feast.
+function feast(beast, dish) {
+    return beast[0] === dish[0] && beast[beast.length -1] === dish[dish.length -1] ? true : false;
+}
+// return dish.startsWith(beast[0]) && dish.endsWith(beast[beast.length-1])
+// return beast[0]===dish[0] && beast.slice(-1)===dish.slice(-1);
+console.log(feast("great blue heron", "garlic naan"), true);
+console.log(feast("chickadee", "chocolate cake"), true);
+console.log(feast("brown bear", "bear claw"), false);
+console.clear();
