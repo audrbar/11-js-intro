@@ -365,4 +365,83 @@ function feast(beast, dish) {
 console.log(feast("great blue heron", "garlic naan"), true);
 console.log(feast("chickadee", "chocolate cake"), true);
 console.log(feast("brown bear", "bear claw"), false);
+
+// Given an array of integers. Return an array, where the first element is the count of positives numbers and the second element is sum of negative numbers. 0 is neither positive nor negative. If the input is an empty array or is null, return an empty array.
+function countPositivesSumNegatives(input) {
+    let positiveNumbers = 0;
+    let negativeNumbers = 0;
+    if (input === null || input.length === 0) {
+    return [];
+    } else {
+    input.forEach((num) => num > 0 ? positiveNumbers++ : negativeNumbers += num);
+    }
+    return [positiveNumbers , negativeNumbers];
+}
+//return input && input.length ? [input.filter(p => p > 0).length, input.filter(n => n < 0).reduce((a, b) => a + b, 0)] : [];
+console.log(countPositivesSumNegatives([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]));
+console.log(countPositivesSumNegatives([0, 2, 3, 0, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14]));
+
+// Write a 'welcome' function that takes a parameter 'language' (always a string), and returns a greeting - if you have it in your database. It should default to English if the language is not in the database, or in the event of an invalid input.
+
+const db = {
+    english: 'Welcome',
+    czech: 'Vitejte',
+    danish: 'Velkomst',
+    dutch: 'Welkom',
+    estonian: 'Tere tulemast',
+    finnish: 'Tervetuloa',
+    flemish: 'Welgekomen',
+    french: 'Bienvenue',
+    german: 'Willkommen',
+    irish: 'Failte',
+    italian: 'Benvenuto',
+    latvian: 'Gaidits',
+    lithuanian: 'Laukiamas',
+    polish: 'Witamy',
+    spanish: 'Bienvenido',
+    swedish: 'Valkommen',
+    welsh: 'Croeso'
+};
+function greeting(language) {   
+    return db[language] || db.english;
+}
+// return langs[lang]||langs['english'];
+console.log(greeting('english'), 'Welcome', "Your function should have returned 'Welcome'. Try again.");
+console.log(greeting('dutch'), 'Welkom', "Your function should have returned 'Welkom'. Try again.");
+console.log(greeting('IP_ADDRESS_INVALID'), 'Welcome', "Your function should have returned 'Welcome'. Try again.");
+
+// Write a function that checks if a given string (case insensitive) is a palindrome.
+function isPalindrome(x) {
+    return x.toLowerCase() === x.toLowerCase().split("").reverse().join("") ? true : false;
+}
+console.log(isPalindrome("a"), true);
+console.log(isPalindrome("aba"), true);
+console.log(isPalindrome("Abba"), true);
+console.log(isPalindrome("hello"), false);
+console.log(isPalindrome("Bob"), true);
+console.log(isPalindrome("Madam"), true);
+console.log(isPalindrome("AbBa"), true);
+console.log(isPalindrome(""), true);
+
+// Given an array of integers, return a new array with each value doubled.
+function maps(x){
+    let result = [];
+    x.forEach(function (el) { result.push(el + el);})
+    return  result;
+}
+console.log(maps([1, 2, 3]), [2, 4, 6]);
+console.log(maps([2, 2, 2, 2, 2, 2]), [4, 4, 4, 4, 4, 4]); 
+console.log(maps([4, 1, 1, 1, 4]), [8, 2, 2, 2, 8]);
+
+// Assuming he's gonna grab a specific given number of bullets and move forward to fight another specific given number of dragons, will he survive? Return True if yes, False otherwise :)
+function hero(bullets, dragons){
+    return bullets / dragons >= 2 ? true : false;
+}
+// return bullets >= dragons * 2
+console.log(hero(10, 5), true);
+console.log(hero(7, 4), false);
+console.log(hero(4, 5), false);
+console.log(hero(100, 40), true);
+console.log(hero(1500, 751), false);
+console.log(hero(0, 1), false);
 console.clear();
